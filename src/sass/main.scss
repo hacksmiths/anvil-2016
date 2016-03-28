@@ -1,187 +1,201 @@
+//   ______                        __  __        __    __                      __               ______    ______     __     ______
+// |  $$$$$$\ _______   __     __  \$$| $$      | $$  | $$  ______    _______ | $$   __       |  $$$$$$\|  $$$$$$\|   $$  |  $$$$$$\
+// | $$__| $$|       \ |  \   /  \|  \| $$      | $$__| $$ |      \  /       \| $$  /  \       \$$__| $$| $$$\| $$ \$$$$  | $$___\$$
+// | $$    $$| $$$$$$$\ \$$\ /  $$| $$| $$      | $$    $$  \$$$$$$\|  $$$$$$$| $$_/  $$       /      $$| $$$$\ $$  | $$  | $$    \
+// | $$$$$$$$| $$  | $$  \$$\  $$ | $$| $$      | $$$$$$$$ /      $$| $$      | $$   $$       |  $$$$$$ | $$\$$\$$  | $$  | $$$$$$$\
+// | $$  | $$| $$  | $$   \$$ $$  | $$| $$      | $$  | $$|  $$$$$$$| $$_____ | $$$$$$\       | $$_____ | $$_\$$$$ _| $$_ | $$__/ $$
+// | $$  | $$| $$  | $$    \$$$   | $$| $$      | $$  | $$ \$$    $$ \$$     \| $$  \$$\      | $$     \ \$$  \$$$|   $$ \ \$$    $$
+//  \$$   \$$ \$$   \$$     \$     \$$ \$$       \$$   \$$  \$$$$$$$  \$$$$$$$ \$$   \$$       \$$$$$$$$  \$$$$$$  \$$$$$$  \$$$$$$/
 @import "vendor/bourbon/assets/stylesheets/_bourbon.scss";
 @import "vendor/neat/assets/stylesheets/_neat.scss";
-
+@import "reset";
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,400italic);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,200,600,700,400italic,300italic);
 @import url(https://fonts.googleapis.com/css?family=Share+Tech+Mono);
-@import "normalize";
-
-//$techFont:'Quattrocento Sans', sans-serif;
 $openFont: 'Open Sans', sans-serif;
-$shareTechFont: 'Share Tech Mono', ;
-
-$goldy: #bd8f2d; 
+$sourceSans: 'Source Sans Pro', sans-serif;
+$shareTechFont: 'Share Tech Mono',;
+$goldy: rgb(189, 143, 45);
 $creamyCream: #F0F0F0;
 $nightTime: #000;
-
-html{
-    background: $nightTime;
-    color: $creamyCream;
+html {
+  background: $nightTime;
+  color: $creamyCream;
 }
-
 body {
-    text-align: center;
-    font-family: $shareTechFont;
-    font-weight: 400;
-    font-size: 16px;
-    margin: 0 auto;
-    letter-spacing: 0.1px;
+  text-align: center;
+  font-family: $shareTechFont;
+  font-size: 16px;
+  margin: 0 auto;
+  letter-spacing: 0.1px;
 }
-
-h1, h2,h3,h4,h5,h6 {
-    font-family: $openFont;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $sourceSans;
+  font-weight: 400;
 }
-
-h1 { font-size: 4em; } 
-
-h2 { font-size: 3em; } 
-
-h3 { font-size: 2.7em; } 
-
-h4 { font-size: 2.4em; } 
-
-h5 { font-size: 2em; font-weight: 100; } 
-
-h6 { font-size: 1.8em }
-
-p { font-size: 1.2em }
-
-a:visited, a:active, a {
-    color: #F0F0F0;
-    text-decoration: none;
+h5 {
+  font-size: 2em;
 }
-
+h6 {
+  font-size: 1.6em;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+p {
+  font-size: 1.2em;
+  line-height: 1.3em;
+  letter-spacing: 0.5px;
+}
+a:visited,
+a:active,
+a {
+  color: #F0F0F0;
+  text-decoration: none;
+}
 hr {
-    border:1px dashed rgba(255,255,255,0.2);
-    width: 500px ;
-    margin-top: 70px;
+  border: 1px dashed rgba(255,255,255,0.2);
+  width: 500px;
+  margin: 30px auto;
 }
-
 .bottomLine {
-    border:1px solid rgba(255,255,255,0.2);
-    width: 500px;
-    margin-bottom: 40px;
+  border: 1px solid rgb(255,255,255);
+  width: 500px;
+  margin: 40px auto 30px;
 }
-
-header, section {
-    margin-left: 23%;
-    margin-right: 23%;
-}
-
-.logo {
-    position: fixed;
-    left: 30px;
-    top: 20px;
-    width: 140px;
-    margin: 0;
-}
-
-.coverImage { 
-    background:  linear-gradient(
-      rgba(0,0,0,0),
-      rgba(0,0,0,1)
-    ), url(../img/backgrounds/goldsmiths.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding: 100px 0;  
-}
-
 header {
-    .title {
-        font-size: 7em; 
-        font-weight: 700;
-        color: $goldy;
-        line-height: 1em;
-        margin: 25px 0;
-    }
-    .subtitle{
-        margin: 30px 0;
-    }
-    .goldLogo{
-    }
-    .date {
-        font-size: 2.3em;
-        margin: 25px 0;
-    }
-    .speech {
-        font-size: 1.6em;
-        margin: 50px 0 70px 0 ;
-    }
+  margin: 0 20%;
 }
-
-.button, #submit {
-    font-size: 1.2em;
-    letter-spacing: 2px;
-    border-radius: 3px;
-    padding: 15px 25px;
-    border: 1px solid #fff;
-    @include transition (all 0.3s)
+section {
+  margin: 200px 20%;
+  p {
+    padding: 20px 0 60px;
+  }
 }
-
-.button:hover {
-    background: $goldy;
-    border: 1px solid $goldy;
-    color: #000;
+.logo {
+  position: fixed;
+  width: 140px;
+  left: 30px;
+  top: 20px;
 }
-
-.sectionTitle {
-    font-size: 3em;
+.mlhLogo {
+  position: fixed;
+  right: 30px;
+  width: 100px;
 }
-
-form {
-    width: 500px;
-    margin: 0 auto;
+.coverImage {
+  background: linear-gradient( rgba(0,0,0,0), rgba(0,0,0,1) ), url("../img/backgrounds/goldsmiths.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 100px 0;
 }
-
-input, textarea {
+header {
+  .title {
+    color: $goldy;
+    font-size: 7em;
+    text-shadow: 0 0 20px rgba(0,0,0,0.5);
+    font-weight: 700;
+    line-height: 1em;
+    margin: 20px 0;
+  }
+  .subtitle {
+    font-size: 2.3em;
+    margin-top: 10px;
+    margin-bottom: 100px;
+    text-transform: capitalize;
+  }
+  .hosts {
     width: 100%;
-    padding: 10px 20px;
-    margin: 10px 0 ;
-    background: rgba(255,255,255,0);
-    border: 1px solid #fff;
-    border-radius: 2px;
+    padding-bottom: 50px;
+    #hacksmiths {
+      width: 20%;
+    }
+    #goldsmiths {
+      width: 50%;
+      padding-left: 50px;
+      padding-bottom: 50px;
+    }
+  }
+  .date {
+    font-size: 3em;
+    margin: 25px 0;
+  }
+  .speech {
+    font-size: 1.5em;
+    margin: 50px 0;
+  }
 }
-
-textarea {
-    height: 200px;
-}
-
+.button,
 #submit {
-    float: left;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  border-radius: 3px;
+  padding: 15px 25px;
+  border: 1px solid #fff;
+  @include transition (all 0.3s);
+}
+.button:hover {
+  background: $goldy;
+  border: 1px solid $goldy;
+  color: #000;
+}
+.sectionTitle {
+  font-size: 3em;
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin-bottom: 50px;
 }
 
-#submit:hover {
-    background: $goldy;
-    border: 1px solid $goldy;
-    color: #000;
+.faq {
+  p {
+    padding: 0;
+  }
 }
 
-form {
-    @include clearfix;
-}
-
-.contactInfo {
-    h5 {
-       margin-bottom: 0; 
-    }
-    .contactWrap, .emailSocial{
-        @include outer-container;
-        .address, .travInfo {
-            @include span-columns(6);
+footer {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  text-align: left;
+  .contactForm {
+    width: 450px;
+    display: inline-block;
+    margin-left: 9%;
+    margin-right: 30px;
+    form {
+      @include clearfix;
+      input,
+      textarea {
+        width: 100%;
+        font-family: $shareTechFont;
+        font-size: 1.2em;
+        color: #fff;
+        padding: 10px 20px;
+        margin: 10px 0;
+        background: rgba(255,255,255,0);
+        border: 1px solid #fff;
+        border-radius: 2px;
+      }
+      textarea {
+        height: 200px;
+      }
+      #submit {
+        #submit:hover {
+          background: $goldy;
+          border: 1px solid $goldy;
+          color: #000;
         }
-        .email, .social {
-            @include span-columns(6);
-        }
+      }
     }
-    .social {
-        
-    }
-    
-    
-  
+  }
+  .contactInfo {
+    width: 40%;
+    display: inline-block;
+    margin-right: 9%;
+  }
 }
-
-
-
-
-
