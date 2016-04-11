@@ -21,23 +21,23 @@ var gulp       = require('gulp'),
 // --------------------------------------------------------------------
 
 var src = {
-  html: "src/*.html",
-  sass: "src/sass/**/*.scss",
-  js: "src/js/**/*.js",
-  img: "src/img/**/*",
-  fonts: "src/fonts/*"
+  html: "src/html/*.html",
+  sass: "src/styles/**/*.scss",
+  js: "src/scripts/**/*.js",
+  img: "src/images/**/*",
+  fonts: "src/styles/fonts/*"
 
 };
 
 var output = {
   html: "output/",
-  js: "output/js",
-  css: "output/css",
-  img: "output/img/",
-  fonts: "output/fonts/",
+  js: "output/scripts",
+  css: "output/styles",
+  img: "output/images/",
+  fonts: "output/styles/fonts/",
   min_css: 'app.min.css',
   min_js: 'app.min.js'
-};
+}
 
 // --------------------------------------------------------------------
 // Error Handling
