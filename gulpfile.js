@@ -14,7 +14,7 @@ var gulp       = require('gulp'),
     imagemin   = require('gulp-imagemin'),
     jshint     = require('gulp-jshint'),
     pngquant   = require('imagemin-pngquant'),
-    browseSync = require('browser-sync');
+    browserSync = require('browser-sync').create();
 
 // --------------------------------------------------------------------
 // Settings
@@ -25,7 +25,7 @@ var src = {
   sass: "src/styles/**/*.scss",
   js: "src/scripts/**/*.js",
   img: "src/images/**/*",
-  fonts: "src/styles/fonts/*"
+  fonts: "src/fonts/*"
 
 };
 
@@ -34,7 +34,7 @@ var output = {
   js: "output/scripts",
   css: "output/styles",
   img: "output/images/",
-  fonts: "output/styles/fonts/",
+  fonts: "output/fonts/",
   min_css: 'app.min.css',
   min_js: 'app.min.js'
 }
@@ -58,6 +58,9 @@ gulp.task('html', function(){
       errorHandler: onError
   }))
   .pipe(gulp.dest(output.html))
+  .pipe(browserSync.reload({
+    stream: true
+  }));
 });
 
 // --------------------------------------------------------------------
@@ -78,7 +81,7 @@ gulp.task('sass', function() {
     .pipe(gulp.dest(output.css))
     .pipe(minify_css())
     .pipe(gulp.dest(output.css))
-    .pipe(browseSync.reload({
+    .pipe(browserSync.reload({
       stream: true
     }));
 
@@ -98,7 +101,9 @@ gulp.task('js', function() {
     .pipe(uglify())
     .pipe(concat(output.min_js))
     .pipe(gulp.dest(output.js))
-
+    .pipe(browserSync.reload({
+      stream: true
+    }));
 });
 
 // --------------------------------------------------------------------
@@ -116,7 +121,9 @@ gulp.task('img', function() {
       use: [pngquant()]
     }))
     .pipe(gulp.dest(output.img))
-
+    .pipe(browserSync.reload({
+      stream: true
+    }));
 });
 
 // --------------------------------------------------------------------
@@ -128,6 +135,9 @@ gulp.task('fonts', function(){
       errorHandler: onError
   }))
   .pipe(gulp.dest(output.fonts))
+  .pipe(browserSync.reload({
+    stream: true
+  }));
 });
 
 // --------------------------------------------------------------------
@@ -136,14 +146,13 @@ gulp.task('fonts', function(){
 
 gulp.task('watch', function() {
 
-  browseSync.init({
+  browserSync.init({
     server: './output'
   });
   gulp.watch(src.js, ['js']);
   gulp.watch(src.sass, ['sass']);
   gulp.watch(src.img, ['img']);
-  gulp.watch(output.html).on('change', browseSync.reload)
-
+  gulp.watch(src.html, ['html']);
 });
 
 // --------------------------------------------------------------------
