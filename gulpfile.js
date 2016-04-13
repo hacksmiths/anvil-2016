@@ -15,6 +15,7 @@ var gulp       = require('gulp'),
     jshint     = require('gulp-jshint'),
     pngquant   = require('imagemin-pngquant'),
     browserSync = require('browser-sync').create();
+    deploy = require('gulp-gh-pages');
 
 // --------------------------------------------------------------------
 // Settings
@@ -139,6 +140,18 @@ gulp.task('fonts', function(){
     stream: true
   }));
 });
+
+//---------------------------------------------------------------------
+// Task: gh-pages
+// --------------------------------------------------------------------
+
+// Push build to gh-pages
+
+gulp.task('deploy', function () {
+  return gulp.src("./output/**/*")
+      .pipe(deploy())
+      });
+
 
 // --------------------------------------------------------------------
 // Watch
