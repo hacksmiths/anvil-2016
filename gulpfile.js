@@ -2,20 +2,20 @@
 // Plugins
 // --------------------------------------------------------------------
 
-var gulp       = require('gulp'),
-    sass       = require('gulp-sass'),
-    concat     = require('gulp-concat'),
-    watch      = require('gulp-watch'),
-    plumber    = require('gulp-plumber'),
-    minify_css = require('gulp-minify-css'),
-    uglify     = require('gulp-uglify'),
-    //sourcemaps = require('gulp-sourcemaps'),
-    prefix     = require('gulp-autoprefixer'),
-    imagemin   = require('gulp-imagemin'),
-    jshint     = require('gulp-jshint'),
-    pngquant   = require('imagemin-pngquant'),
+var gulp        = require('gulp'),
+    sass        = require('gulp-sass'),
+    concat      = require('gulp-concat'),
+    watch       = require('gulp-watch'),
+    plumber     = require('gulp-plumber'),
+    minify_css  = require('gulp-minify-css'),
+    uglify      = require('gulp-uglify'),
+    prefix      = require('gulp-autoprefixer'),
+    deploy      = require('gulp-gh-pages');
+    imagemin    = require('gulp-imagemin'),
+    jshint      = require('gulp-jshint'),
+    pngquant    = require('imagemin-pngquant'),
     browserSync = require('browser-sync').create();
-    deploy = require('gulp-gh-pages');
+
 
 // --------------------------------------------------------------------
 // Settings

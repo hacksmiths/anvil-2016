@@ -141,6 +141,11 @@ section {
     color: #000;
     @include transition (all 0.3s);
   }
+  .invertHover:hover{
+    background-color: #000;
+    color: $goldy;
+    @include transition (all 0.3s);
+  }
   .sectionTitle {
     font-size: 3em;
     font-weight: 600;
