@@ -17,6 +17,9 @@ $goldy: rgb(189, 143, 45);
 $creamyCream: #F0F0F0;
 $nightTime: #000;
 
+$break-small: 500px;
+$break-medium: 1100px;
+
 html {
   background: $nightTime;
   color: $creamyCream;
@@ -37,18 +40,36 @@ h1,h2,h3,h4,h5,h6 {
 
 h5 {
   font-size: 2em;
+  @media screen and (max-width: $break-medium) {
+
+  }
+  @media screen and (max-width: $break-small) {
+
+  }
 }
 
 h6 {
   font-size: 1.6em;
   font-weight: bold;
   margin-bottom: 30px;
+  @media screen and (max-width: $break-medium) {
+
+  }
+  @media screen and (max-width: $break-small) {
+
+  }
 }
 
 p {
   font-size: 1.2em;
   line-height: 1.3em;
   letter-spacing: 0.5px;
+  @media screen and (max-width: $break-medium) {
+    font-size: 1.1em;
+  }
+  @media screen and (max-width: $break-small) {
+    font-size: 1em;
+  }
 }
 
 a:visited, a:active, a {
@@ -84,13 +105,30 @@ hr {
   width: 140px;
   left: 30px;
   top: 20px;
+  @media screen and (max-width: $break-medium) {
+    width: 100px;
+    left: 20px;
+    top: 10px;
+  }
+  @media screen and (max-width: $break-small) {
+    width: 90px;
+    left: 10px;
+    top: 10px;
+  }
 }
-
 
 #mlhLogo {
   position: fixed;
   right: 30px;
   width: 100px;
+  @media screen and (max-width: $break-medium) {
+    right: 20px;
+    width: 80px;
+  }
+  @media screen and (max-width: $break-small) {
+    right: 10px;
+    width: 70px;
+  }
 }
 
 #improbableLogo {
@@ -103,6 +141,26 @@ hr {
 
 #chirpLogo{
     @include outer-container(25%);
+}
+
+#hacksmithsLogo {
+  @include outer-container(25%);
+  min-width: 100px;
+  margin-bottom: 20px;
+}
+
+#goldsmithsLogo {
+  @include outer-container(70%);
+}
+
+#dgitLogo {
+  @include outer-container(50%);
+  min-width: 240px;
+}
+
+#rocketAppLogo {
+  @include outer-container(25%);
+  margin-left: 10%;
 }
 
 .coverImage {
@@ -122,10 +180,22 @@ header {
     font-weight: 700;
     line-height: 1em;
     margin: 20px 0;
+    @media screen and (max-width: $break-medium) {
+      font-size: 5em;
+    }
+    @media screen and (max-width: $break-small) {
+      font-size: 3em;
+    }
   }
   .subtitle {
     font-size: 2.3em;
     text-transform: capitalize;
+    @media screen and (max-width: $break-medium) {
+      font-size: 4em;
+    }
+    @media screen and (max-width: $break-small) {
+      font-size: 2em;
+    }
   }
   .hosts {
     width: 100%;
@@ -134,10 +204,28 @@ header {
   .date {
     font-size: 3em;
     margin: 25px 0;
+    @media screen and (max-width: $break-medium) {
+      font-size: 2.5em;
+    }
+    @media screen and (max-width: $break-small) {
+      font-size: 2em;
+    }
   }
   .speech {
     font-size: 1.5em;
     margin: 50px 0;
+    @media screen and (max-width: $break-medium) {
+      font-size: 1em;
+    }
+    @media screen and (max-width: $break-small) {
+      font-size: 1em;
+    }
+  }
+  @media screen and (max-width: $break-medium) {
+    margin: 50px 10%;
+  }
+  @media screen and (max-width: $break-small) {
+    margin: 120px 5%;
   }
 }
 
@@ -168,12 +256,20 @@ section {
   .eventSection {
     margin-bottom: 40px;
     @include outer-container;
-    img {
+    .eventImg {
       @include span-columns(6);
+      @media screen and (max-width: $break-medium) {
+        @include span-columns(12);
+        margin-bottom: 20px;
+      }
     }
     .eventPara{
       text-align: left;
       @include span-columns(6);
+      @media screen and (max-width: $break-medium) {
+        @include span-columns(12);
+        text-align: center;
+      }
     }
   }
   .secSubtitle{
@@ -184,6 +280,13 @@ section {
     width: 500px;
     margin: 80px auto 30px;
   }
+  @media screen and (max-width: $break-medium) {
+    margin: 150px 10% 0px 10%;
+  }
+  @media screen and (max-width: $break-small) {
+    margin: 150px 5% 0px 5%;
+  }
+
 }
 
 .faq {
@@ -224,6 +327,9 @@ section {
         color: #000;
       }
     }
+    @media screen and (max-width: $break-medium) {
+      display: none;
+    }
   }
   .contactInfo {
     text-align: left;
@@ -250,6 +356,10 @@ section {
     p {
       padding: 5px 0;
       margin-left: 21px;
+    }
+    @media screen and (max-width: $break-medium) {
+      text-align: center;
+      width: 100%;
     }
   }
 }
