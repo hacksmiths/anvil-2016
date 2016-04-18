@@ -79,17 +79,30 @@ hr {
   color: #000;
 }
 
-.logo {
+#logo {
   position: fixed;
   width: 140px;
   left: 30px;
   top: 20px;
 }
 
-.mlhLogo {
+
+#mlhLogo {
   position: fixed;
   right: 30px;
   width: 100px;
+}
+
+#improbableLogo {
+    @include outer-container(100%)
+}
+
+#spotifyLogo {
+    @include outer-container(75%);
+}
+
+#chirpLogo{
+    @include outer-container(25%);
 }
 
 .coverImage {
