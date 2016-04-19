@@ -119,18 +119,6 @@ hr {
   }
 }
 
-#improbableLogo {
-    @include outer-container(100%)
-}
-
-#spotifyLogo {
-    @include outer-container(60%);
-}
-
-#chirpLogo{
-    @include outer-container(25%);
-}
-
 #hacksmithsLogo {
   @include outer-container(25%);
   min-width: 100px;
@@ -146,9 +134,31 @@ hr {
   min-width: 240px;
 }
 
+#improbableLogo {
+    @include outer-container(100%)
+}
+
+#spotifyLogo {
+    @include outer-container(60%);
+}
+
+#chirpLogo{
+    @include outer-container(25%);
+    @media screen and (max-width: $break-medium) {
+      @include outer-container(35%);
+      display: block;
+      margin-bottom: 30px;
+    }
+}
+
 #rocketAppLogo {
   @include outer-container(25%);
   margin-left: 10%;
+  @media screen and (max-width: $break-medium) {
+    @include outer-container(35%);
+    display: block;
+    margin-left: auto;
+  }
 }
 
 .coverImage {
