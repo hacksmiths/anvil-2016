@@ -40,24 +40,12 @@ h1,h2,h3,h4,h5,h6 {
 
 h5 {
   font-size: 2em;
-  @media screen and (max-width: $break-medium) {
-
-  }
-  @media screen and (max-width: $break-small) {
-
-  }
 }
 
 h6 {
   font-size: 1.6em;
   font-weight: bold;
   margin-bottom: 30px;
-  @media screen and (max-width: $break-medium) {
-
-  }
-  @media screen and (max-width: $break-small) {
-
-  }
 }
 
 p {
