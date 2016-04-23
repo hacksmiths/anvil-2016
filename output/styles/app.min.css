@@ -163,7 +163,7 @@ a:visited, a:active, a {
 
 hr {
   border: 1px dashed rgba(255, 255, 255, 0.2);
-  width: 500px;
+  width: 90%b;
   margin: 30px auto; }
 
 .button,
@@ -210,33 +210,6 @@ hr {
       right: 10px;
       width: 70px; } }
 
-#improbableLogo {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto; }
-  #improbableLogo::after {
-    clear: both;
-    content: "";
-    display: table; }
-
-#spotifyLogo {
-  max-width: 60%;
-  margin-left: auto;
-  margin-right: auto; }
-  #spotifyLogo::after {
-    clear: both;
-    content: "";
-    display: table; }
-
-#chirpLogo {
-  max-width: 25%;
-  margin-left: auto;
-  margin-right: auto; }
-  #chirpLogo::after {
-    clear: both;
-    content: "";
-    display: table; }
-
 #hacksmithsLogo {
   max-width: 25%;
   margin-left: auto;
@@ -268,6 +241,44 @@ hr {
     content: "";
     display: table; }
 
+#improbableLogo {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+  #improbableLogo::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+#spotifyLogo {
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: auto; }
+  #spotifyLogo::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+#chirpLogo {
+  max-width: 25%;
+  margin-left: auto;
+  margin-right: auto; }
+  #chirpLogo::after {
+    clear: both;
+    content: "";
+    display: table; }
+  @media screen and (max-width: 1100px) {
+    #chirpLogo {
+      max-width: 35%;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      margin-bottom: 30px; }
+      #chirpLogo::after {
+        clear: both;
+        content: "";
+        display: table; } }
+
 #rocketAppLogo {
   max-width: 25%;
   margin-left: auto;
@@ -277,6 +288,17 @@ hr {
     clear: both;
     content: "";
     display: table; }
+  @media screen and (max-width: 1100px) {
+    #rocketAppLogo {
+      max-width: 35%;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+      margin-left: auto; }
+      #rocketAppLogo::after {
+        clear: both;
+        content: "";
+        display: table; } }
 
 #mlh_logo {
   max-width: 25%;
@@ -412,7 +434,7 @@ section {
     margin: 40px 0; }
   section .bottomLine {
     border: 1px solid white;
-    width: 500px;
+    width: 90%;
     margin: 80px auto 30px; }
   @media screen and (max-width: 1100px) {
     section {
@@ -435,6 +457,11 @@ section {
     clear: both;
     content: "";
     display: table; }
+  .contact hr {
+    width: 90%; }
+  @media screen and (max-width: 1100px) {
+    .contact .sectionTitle {
+      display: none; } }
   .contact .contactForm {
     display: inline-block;
     text-align: left;

@@ -7,6 +7,8 @@
 // | $$  | $$| $$  | $$    \$$$   | $$| $$      | $$  | $$ \$$    $$ \$$     \| $$  \$$\      | $$     \ \$$  \$$$|   $$ \ \$$    $$
 //  \$$   \$$ \$$   \$$     \$     \$$ \$$       \$$   \$$  \$$$$$$$  \$$$$$$$ \$$   \$$       \$$$$$$$$  \$$$$$$  \$$$$$$  \$$$$$$/
 
+
+
 @import "reset";
 @import "./fontstyles.scss";
 
@@ -40,24 +42,12 @@ h1,h2,h3,h4,h5,h6 {
 
 h5 {
   font-size: 2em;
-  @media screen and (max-width: $break-medium) {
-
-  }
-  @media screen and (max-width: $break-small) {
-
-  }
 }
 
 h6 {
   font-size: 1.6em;
   font-weight: bold;
   margin-bottom: 30px;
-  @media screen and (max-width: $break-medium) {
-
-  }
-  @media screen and (max-width: $break-small) {
-
-  }
 }
 
 p {
@@ -79,7 +69,7 @@ a:visited, a:active, a {
 
 hr {
   border: 1px dashed rgba(255,255,255,0.2);
-  width: 500px;
+  width: 90%b;
   margin: 30px auto;
 }
 
@@ -131,18 +121,6 @@ hr {
   }
 }
 
-#improbableLogo {
-    @include outer-container(100%)
-}
-
-#spotifyLogo {
-    @include outer-container(60%);
-}
-
-#chirpLogo{
-    @include outer-container(25%);
-}
-
 #hacksmithsLogo {
   @include outer-container(25%);
   min-width: 100px;
@@ -159,9 +137,31 @@ hr {
   min-width: 240px;
 }
 
+#improbableLogo {
+    @include outer-container(100%)
+}
+
+#spotifyLogo {
+    @include outer-container(60%);
+}
+
+#chirpLogo{
+    @include outer-container(25%);
+    @media screen and (max-width: $break-medium) {
+      @include outer-container(35%);
+      display: block;
+      margin-bottom: 30px;
+    }
+}
+
 #rocketAppLogo {
   @include outer-container(25%);
   margin-left: 10%;
+  @media screen and (max-width: $break-medium) {
+    @include outer-container(35%);
+    display: block;
+    margin-left: auto;
+  }
 }
 
 #mlh_logo {
@@ -183,7 +183,6 @@ header {
   .title {
     color: $goldy;
     font-size: 7em;
-    //text-shadow: 0 0 20px rgba(255,255,255,0.5);
     font-weight: 700;
     line-height: 1em;
     margin: 20px 0;
@@ -284,7 +283,7 @@ section {
   }
   .bottomLine {
     border: 1px solid rgb(255,255,255);
-    width: 500px;
+    width: 90%;
     margin: 80px auto 30px;
   }
   @media screen and (max-width: $break-medium) {
@@ -307,6 +306,14 @@ section {
   margin-left: auto;
   margin-right: auto;
   @include outer-container;
+  hr {
+    width:90%;
+  }
+  .sectionTitle {
+    @media screen and (max-width: $break-medium) {
+      display: none;
+    }
+  }
   .contactForm {
     display: inline-block;
     text-align: left;
