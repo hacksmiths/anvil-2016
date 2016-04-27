@@ -142,11 +142,13 @@ hr {
 }
 
 #spotifyLogo {
-    @include outer-container(60%);
+    @include outer-container(50%);
 }
 
-#chirpLogo{
+#chirpLogo, #rocketAppLogo, #stepsizeLogo, #trimitLogo, #dotTechLogo{
     @include outer-container(25%);
+    margin-left: 20px;
+    margin-bottom: 30px;
     @media screen and (max-width: $break-medium) {
       @include outer-container(35%);
       display: block;
@@ -154,15 +156,25 @@ hr {
     }
 }
 
-#rocketAppLogo {
-  @include outer-container(25%);
-  margin-left: 10%;
+#trimitLogo{
+  padding: 0 70px;
   @media screen and (max-width: $break-medium) {
     @include outer-container(35%);
-    display: block;
-    margin-left: auto;
+    padding: 0 20px;
   }
 }
+
+#dotTechLogo{
+  width: 15%;
+  @media screen and (max-width: $break-medium) {
+    @include outer-container(35%);
+    padding: 0 20px;
+    width: 35%;
+  }
+}
+
+
+
 
 #mlh_logo {
     @include outer-container(25%);
@@ -248,6 +260,9 @@ section {
     color: #000;
     @include transition (all 0.3s);
   }
+  .invertHover {
+    text-decoration: none;
+  }
   .invertHover:hover{
     background-color: #000;
     color: $goldy;
@@ -292,7 +307,6 @@ section {
   @media screen and (max-width: $break-small) {
     margin: 150px 5% 0px 5%;
   }
-
 }
 
 .faq {
