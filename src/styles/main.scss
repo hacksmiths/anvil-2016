@@ -173,13 +173,17 @@ hr {
   }
 }
 
-
-
-
 #mlh_logo {
     @include outer-container(25%);
     min-width: 240px;
     max-height:130px;
+}
+
+#floorPlan {
+  width: 70%;
+  @media screen and (max-width: $break-small) {
+    width: 95%;
+  }
 }
 
 .coverImage {
