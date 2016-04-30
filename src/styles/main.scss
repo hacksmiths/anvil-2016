@@ -150,7 +150,7 @@ hr {
     @include outer-container(60%);
 }
 
-#chirpLogo{
+#chirpLogo, #rocketAppLogo, #stepsizeLogo, #trimitLogo, #dotTechLogo {
     @include outer-container(25%);
     @media screen and (max-width: $break-medium) {
       @include outer-container(35%);
@@ -158,6 +158,8 @@ hr {
       margin-bottom: 30px;
     }
 }
+
+
 
 #rocketAppLogo {
   @include outer-container(25%);
