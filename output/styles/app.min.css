@@ -210,6 +210,15 @@ hr {
       right: 10px;
       width: 70px; } }
 
+#fatfLogo {
+  max-width: 30%;
+  margin-left: auto;
+  margin-right: auto; }
+  #fatfLogo::after {
+    clear: both;
+    content: "";
+    display: table; }
+
 #hacksmithsLogo {
   max-width: 25%;
   margin-left: auto;

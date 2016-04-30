@@ -121,6 +121,10 @@ hr {
   }
 }
 
+#fatfLogo {
+    @include outer-container(30%);
+}
+
 #hacksmithsLogo {
   @include outer-container(25%);
   min-width: 100px;
