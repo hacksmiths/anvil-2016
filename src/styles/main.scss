@@ -146,13 +146,11 @@ hr {
 }
 
 #spotifyLogo {
-    @include outer-container(50%);
+    @include outer-container(60%);
 }
 
-#chirpLogo, #rocketAppLogo, #stepsizeLogo, #trimitLogo, #dotTechLogo{
+#chirpLogo{
     @include outer-container(25%);
-    margin-left: 20px;
-    margin-bottom: 30px;
     @media screen and (max-width: $break-medium) {
       @include outer-container(35%);
       display: block;
@@ -160,20 +158,13 @@ hr {
     }
 }
 
-#trimitLogo{
-  padding: 0 70px;
+#rocketAppLogo {
+  @include outer-container(25%);
+  margin-left: 10%;
   @media screen and (max-width: $break-medium) {
     @include outer-container(35%);
-    padding: 0 20px;
-  }
-}
-
-#dotTechLogo{
-  width: 15%;
-  @media screen and (max-width: $break-medium) {
-    @include outer-container(35%);
-    padding: 0 20px;
-    width: 35%;
+    display: block;
+    margin-left: auto;
   }
 }
 
@@ -181,13 +172,6 @@ hr {
     @include outer-container(25%);
     min-width: 240px;
     max-height:130px;
-}
-
-#floorPlan {
-  width: 70%;
-  @media screen and (max-width: $break-small) {
-    width: 95%;
-  }
 }
 
 .coverImage {
@@ -268,9 +252,6 @@ section {
     color: #000;
     @include transition (all 0.3s);
   }
-  .invertHover {
-    text-decoration: none;
-  }
   .invertHover:hover{
     background-color: #000;
     color: $goldy;
@@ -315,6 +296,7 @@ section {
   @media screen and (max-width: $break-small) {
     margin: 150px 5% 0px 5%;
   }
+
 }
 
 .faq {
